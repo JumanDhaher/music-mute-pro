@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Music Mute Pro</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+          <line x1="3" y1="3" x2="21" y2="21" stroke-width="2.5" />
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title" data-i18n="extName">Music Mute Pro</div>
+        <div class="brand-host" id="host">—</div>
+      </div>
+    </div>
+    <label class="toggle">
+      <input type="checkbox" id="enabled" />
+      <span class="toggle-slider"></span>
+    </label>
+  </header>
+  <section class="status" id="status">
+    <div class="status-dot" id="statusDot"></div>
+    <span id="statusText" data-i18n="statusInactive">Inactive</span>
+  </section>
+  <section class="block">
+    <div class="block-label" data-i18n="modeLabel">Mode</div>
+    <div class="seg" role="tablist">
+      <button class="seg-btn" data-mode="off" data-i18n="modeOff">Off</button>
+      <button class="seg-btn" data-mode="karaoke" data-i18n="modeKaraoke">Karaoke</button>
+      <button class="seg-btn" data-mode="spectral" data-i18n="modeSpectral">Spectral</button>
+      <button class="seg-btn" data-mode="ai" data-i18n="modeAI">AI</button>
+    </div>
+  </section>
+  <section class="block">
+    <div class="row-between">
+      <span class="block-label" data-i18n="intensityLabel">Intensity</span>
+      <span class="block-value" id="intensityValue">85%</span>
+    </div>
+    <input type="range" id="intensity" min="0" max="100" value="85" />
+  </section>
+  <section class="block">
+    <div class="row-between">
+      <span class="block-label" data-i18n="speechBoostLabel">Speech Boost</span>
+      <span class="block-value" id="speechBoostValue">1.0×</span>
+    </div>
+    <input type="range" id="speechBoost" min="0" max="40" value="10" />
+  </section>
+  <section class="block">
+    <label class="check-row">
+      <input type="checkbox" id="preserveBass" />
+      <span data-i18n="preserveBassLabel">Preserve bass frequencies</span>
+    </label>
+    <label class="check-row">
+      <input type="checkbox" id="siteOverride" />
+      <span data-i18n="siteOverrideLabel">Use these settings for this site only</span>
+    </label>
+  </section>
+  <footer class="footer">
+    <button class="link-btn" id="openOptions" data-i18n="advancedSettings">Advanced Settings</button>
+    <span class="footer-version">v1.0.0</span>
+  </footer>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
