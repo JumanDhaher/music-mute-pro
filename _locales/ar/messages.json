@@ -1,0 +1,52 @@
+{
+  "extName":            { "message": "كاتم الموسيقى برو" },
+  "extDesc":            { "message": "إزالة الموسيقى الخلفية من الفيديو والصوت في أي موقع باستخدام معالجة الإشارات والذكاء الاصطناعي." },
+  "actionTitle":        { "message": "كاتم الموسيقى - اضغط للإعدادات" },
+
+  "modeLabel":          { "message": "الوضع" },
+  "modeOff":            { "message": "إيقاف" },
+  "modeKaraoke":        { "message": "كاريوكي" },
+  "modeSpectral":       { "message": "طيفي" },
+  "modeAI":             { "message": "ذكاء" },
+
+  "intensityLabel":     { "message": "شدة الكتم" },
+  "speechBoostLabel":   { "message": "تعزيز الصوت البشري" },
+  "preserveBassLabel":  { "message": "الحفاظ على الترددات المنخفضة" },
+  "siteOverrideLabel":  { "message": "استخدم هذه الإعدادات لهذا الموقع فقط" },
+  "advancedSettings":   { "message": "إعدادات متقدمة" },
+
+  "statusActive":       { "message": "نشط على $COUNT$ عنصر", "placeholders": { "COUNT": { "content": "$1" } } },
+  "statusInactive":     { "message": "لا يوجد فيديو أو صوت في هذه الصفحة" },
+  "statusUnsupported":  { "message": "غير مدعوم في هذه الصفحة" },
+
+  "optionsTitle":       { "message": "إعدادات كاتم الموسيقى برو" },
+  "optionsSubtitle":    { "message": "اضبط طريقة إزالة الموسيقى الخلفية من الفيديو والصوت في جميع المواقع." },
+  "audioCardTitle":     { "message": "معالجة الصوت" },
+  "lowCutLabel":        { "message": "حد القطع المنخفض للكلام (هرتز)" },
+  "lowCutHint":         { "message": "الترددات أقل من هذه القيمة تُزال. 180 هرتز قيمة مناسبة لكلام واضح بدون ضجيج." },
+  "highCutLabel":       { "message": "حد القطع العالي للكلام (هرتز)" },
+  "highCutHint":        { "message": "الترددات أعلى من هذه القيمة تُزال. 4500 هرتز يحافظ على وضوح الحروف الساكنة." },
+
+  "aiCardTitle":        { "message": "فصل المصادر بالذكاء الاصطناعي" },
+  "aiCardBody":         { "message": "وضع الذكاء يستخدم نموذج ONNX يعمل محلياً في متصفحك. ضع ملف النموذج في models/separator.onnx داخل مجلد الإضافة." },
+  "aiBackendLabel":     { "message": "المُسرّع المفضل" },
+  "aiBackendAuto":      { "message": "تلقائي (الأفضل المتاح)" },
+  "aiModelStatusLabel": { "message": "حالة النموذج" },
+  "aiModelNotLoaded":   { "message": "لم يُحمّل نموذج" },
+  "aiModelLoading":     { "message": "جاري التحميل…" },
+  "aiModelReady":       { "message": "تم تحميل النموذج بنجاح" },
+  "aiModelMissing":     { "message": "لا يوجد نموذج في models/separator.onnx" },
+  "aiModelError":       { "message": "فشل تهيئة النموذج" },
+  "aiTestButton":       { "message": "اختبار تحميل النموذج الافتراضي" },
+
+  "siteCardTitle":      { "message": "إعدادات خاصة بكل موقع" },
+  "siteCardBody":       { "message": "افتح الـpopup في أي موقع وفعّل خيار «استخدم هذه الإعدادات لهذا الموقع فقط» لإضافته هنا." },
+  "noOverrides":        { "message": "لا يوجد إعدادات خاصة بمواقع." },
+  "removeButton":       { "message": "إزالة" },
+
+  "resetTitle":         { "message": "إعادة الضبط" },
+  "resetButton":        { "message": "إعادة جميع الإعدادات للافتراضي" },
+  "resetConfirm":       { "message": "إعادة جميع الإعدادات للافتراضي؟" },
+
+  "madeWith":           { "message": "مبنية باستخدام Web Audio API + ONNX Runtime Web" }
+}
