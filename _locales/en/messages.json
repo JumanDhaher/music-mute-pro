@@ -1,0 +1,52 @@
+{
+  "extName":            { "message": "Music Mute Pro" },
+  "extDesc":            { "message": "Remove background music from videos and audio on any website using DSP and AI." },
+  "actionTitle":        { "message": "Music Mute Pro — Click to configure" },
+
+  "modeLabel":          { "message": "Mode" },
+  "modeOff":            { "message": "Off" },
+  "modeKaraoke":        { "message": "Karaoke" },
+  "modeSpectral":       { "message": "Spectral" },
+  "modeAI":             { "message": "AI" },
+
+  "intensityLabel":     { "message": "Intensity" },
+  "speechBoostLabel":   { "message": "Speech Boost" },
+  "preserveBassLabel":  { "message": "Preserve bass frequencies" },
+  "siteOverrideLabel":  { "message": "Use these settings for this site only" },
+  "advancedSettings":   { "message": "Advanced Settings" },
+
+  "statusActive":       { "message": "Active on $COUNT$ media", "placeholders": { "COUNT": { "content": "$1" } } },
+  "statusInactive":     { "message": "No media on this page" },
+  "statusUnsupported":  { "message": "Not supported on this page" },
+
+  "optionsTitle":       { "message": "Music Mute Pro Settings" },
+  "optionsSubtitle":    { "message": "Fine-tune how background music is removed from videos and audio across all sites." },
+  "audioCardTitle":     { "message": "Audio Processing" },
+  "lowCutLabel":        { "message": "Speech low cut (Hz)" },
+  "lowCutHint":         { "message": "Frequencies below this are filtered out. 180 Hz is typical for clear speech without bass rumble." },
+  "highCutLabel":       { "message": "Speech high cut (Hz)" },
+  "highCutHint":        { "message": "Frequencies above this are filtered out. 4500 Hz preserves consonants while suppressing high-end music." },
+
+  "aiCardTitle":        { "message": "AI Source Separation" },
+  "aiCardBody":         { "message": "AI mode uses an ONNX model running locally in your browser. Drop a model file at models/separator.onnx in the extension folder, or load one below." },
+  "aiBackendLabel":     { "message": "Preferred backend" },
+  "aiBackendAuto":      { "message": "Auto (best available)" },
+  "aiModelStatusLabel": { "message": "Model status" },
+  "aiModelNotLoaded":   { "message": "No model loaded" },
+  "aiModelLoading":     { "message": "Loading…" },
+  "aiModelReady":       { "message": "Model loaded successfully" },
+  "aiModelMissing":     { "message": "No model at models/separator.onnx" },
+  "aiModelError":       { "message": "Failed to initialize model" },
+  "aiTestButton":       { "message": "Test load default model" },
+
+  "siteCardTitle":      { "message": "Per-Site Overrides" },
+  "siteCardBody":       { "message": "Use the popup on any site and toggle 'Use these settings for this site only' to add it here." },
+  "noOverrides":        { "message": "No per-site overrides yet." },
+  "removeButton":       { "message": "Remove" },
+
+  "resetTitle":         { "message": "Reset" },
+  "resetButton":        { "message": "Reset all settings to defaults" },
+  "resetConfirm":       { "message": "Reset all settings to defaults?" },
+
+  "madeWith":           { "message": "Built with Web Audio API + ONNX Runtime Web" }
+}
