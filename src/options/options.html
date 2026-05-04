@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Music Mute Pro — Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1 data-i18n="optionsTitle">Music Mute Pro Settings</h1>
+      <p class="subtitle" data-i18n="optionsSubtitle">Fine-tune how background music is removed from videos and audio across all sites.</p>
+    </header>
+    <section class="card">
+      <h2 data-i18n="audioCardTitle">Audio Processing</h2>
+      <div class="field">
+        <label data-i18n="lowCutLabel">Speech low cut (Hz)</label>
+        <input type="number" id="lowCut" min="20" max="500" step="10" />
+        <p class="hint" data-i18n="lowCutHint">Frequencies below this are filtered out. 180 Hz is typical for clear speech without bass rumble.</p>
+      </div>
+      <div class="field">
+        <label data-i18n="highCutLabel">Speech high cut (Hz)</label>
+        <input type="number" id="highCut" min="2000" max="20000" step="100" />
+        <p class="hint" data-i18n="highCutHint">Frequencies above this are filtered out. 4500 Hz preserves consonants while suppressing high-end music.</p>
+      </div>
+    </section>
+    <section class="card">
+      <h2 data-i18n="aiCardTitle">AI Source Separation</h2>
+      <p data-i18n="aiCardBody">AI mode uses an ONNX model running locally in your browser. Drop a model file at <code>models/separator.onnx</code> in the extension folder.</p>
+      <div class="field">
+        <label data-i18n="aiBackendLabel">Preferred backend</label>
+        <select id="aiBackend">
+          <option value="auto" data-i18n="aiBackendAuto">Auto (best available)</option>
+          <option value="webgpu">WebGPU</option>
+          <option value="wasm-simd">WASM + SIMD + Threads</option>
+          <option value="wasm">WASM (compatibility)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label data-i18n="aiModelStatusLabel">Model status</label>
+        <div class="model-status" id="modelStatus">
+          <span class="dot"></span>
+          <span class="label" data-i18n="aiModelNotLoaded">No model loaded</span>
+        </div>
+        <button id="testModel" class="btn btn-secondary" data-i18n="aiTestButton">Test load default model</button>
+      </div>
+    </section>
+    <section class="card">
+      <h2 data-i18n="siteCardTitle">Per-Site Overrides</h2>
+      <p data-i18n="siteCardBody">Use the popup on any site and toggle the per-site option to add it here.</p>
+      <ul class="site-list" id="siteList">
+        <li class="empty" data-i18n="noOverrides">No per-site overrides yet.</li>
+      </ul>
+    </section>
+    <section class="card danger-zone">
+      <h2 data-i18n="resetTitle">Reset</h2>
+      <button id="reset" class="btn btn-danger" data-i18n="resetButton">Reset all settings to defaults</button>
+    </section>
+    <footer class="page-footer">
+      <span>Music Mute Pro v1.0.0</span>
+      <span data-i18n="madeWith">Built with Web Audio API + ONNX Runtime Web</span>
+    </footer>
+  </main>
+  <script src="options.js" type="module"></script>
+</body>
+</html>
